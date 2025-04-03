@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hide the checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Style the menu icon */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 100;
+        }
+
+        /* Style the menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -250px; 
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: left 0.3s ease;
+            padding-top: 50px;
+        }
+
+        .menu a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        /* When checkbox is checked, slide the menu in */
+        #menu-toggle:checked ~ .menu {
+            right: 0;
+        }
+
+        /* Style the close icon inside the menu */
+        .close-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hidden checkbox to control the menu -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Menu icon (hamburger) -->
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <!-- Sliding menu -->
+    <div class="menu">
+        <!-- Close icon -->
+        <label for="menu-toggle" class="close-icon">&#10006;</label>
+        
+        <!-- Menu items -->
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+</body>
+</html>
