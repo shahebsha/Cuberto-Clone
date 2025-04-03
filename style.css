@@ -254,7 +254,10 @@ nav{
 }
 
 .page5{
-    height: 200vh; width: 98.5vw;  position: relative; top: -20vw; z-index: 999;
+    height: 200vh; width: 98.5vw; 
+     position: relative; top: -20vw;
+     /* transform: translateY(-20vw); */
+     z-index: 999;
     background-color: white; border-radius: 100px;
 }
 .up{
@@ -273,7 +276,9 @@ nav{
     height: 100%; width: 50%; 
 }
 .rg>video{
-    height: 80%; width: 100%; position: relative; top: 6vw;
+    height: 80%; width: 100%;
+     position: relative; top: 6vw;
+     /* transform: translateY(); */
 }
 .lf{
     height: 100%; width: 50%; display: flex; flex-direction: column ; justify-content: center;
@@ -345,7 +350,8 @@ nav{
     
 }
 .footer{
-    height: 150vh; width: 98.5vw; background: #161616; border: 2px dodgerblue solid; 
+    height: 150vh; width: 98.5vw; background: #161616; border: 2px dodgerblue solid; position: relative;
+    top: -30vw;
 }
 .follow{
     height: 35%; width: 100%;  font-size: 9vw;  overflow: hidden;
